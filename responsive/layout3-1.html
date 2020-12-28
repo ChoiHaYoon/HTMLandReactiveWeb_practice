@@ -1,0 +1,49 @@
+<!DOCKTYPE>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>LayOut</title>
+    <style>
+        * { padding: 0; margin: 0;}
+        body { background: #f3e5f5; }
+        #warp { width: 1200px; margin: 0 auto; }
+        header { width: 100%; height: 150px; background: #9575cd; }
+        aside { float: left; width: 30%; height: 700px; background: #7e57c2; }
+        section { float: left; width: 70%; height: 700px; background: #673ab7; }
+        footer { clear: both; width: 100%; height: 150px; background: #5e35b1; }
+
+        /*
+            화면을 1200이라고 작업을 해두면 겹치는게 똑같아 스크롤바가 생길수있기때문에 max값을 20정도 더 키워준다
+            반응형할때는 절대로 가로 스크롤바가 생기면 안됨
+        */
+        /* 화면 너비 : 0 ~ 1200px */
+        @media (max-width: 1220px){
+            /* 100%가 아닌 px로 작업할 경우엔 가로 스크롤바가 생김 */
+            /* #warp { width: 100%; }*/
+            /* width를 95%로 준 경우는 margin을 2.5%씩 줬다고 생각하면됨(배경여백이 생김)  */
+            #warp { width: 95%; }
+        }
+
+        /* 화면 너비 : 0 ~ 768px >> 769px까지는 위의 width때문에 여백이 있다가 768px부터는 여백이 사라짐 */
+        @media (max-width: 768px){
+            #warp { width: 100%; }
+        }
+
+        /* 화면 너비 : 0 ~ 550px(모바일) */
+        @media (max-width: 550px){
+            #wrap { width: 100%; }
+            header { height: 300px; }
+            aside { float: none; width: 100%; height: 300px; }
+            section { float: none; width: 100%; height: 300px; }
+        }
+    </style>
+</head>
+<body>
+    <div id="warp">
+        <header></header>
+        <aside></aside>
+        <section></section>
+        <footer></footer>
+    </div>
+</body>
+</html>

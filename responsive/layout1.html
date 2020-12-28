@@ -1,0 +1,41 @@
+<!DOCKTYPE>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>layout1</title>
+    <style>
+        #wrap { width: 1000px; margin: 0 auto; }
+/*
+        .header { width: 1000px; height: 100px; background: #2e7d32; }
+        .nav { width: 1000px; height: 100px; background: #388e3c; }
+        .side { float: left; width: 300px; height: 600px; background: #43a047; }
+        .content { float: left; width: 700px; height: 600px; background: #4caf50; }
+         float:left 2번이면 height가 0이 되기때문에 그걸 차단시키기위해 clear: both사용
+        .footer { clear: both; width: 1000px; height: 100px; background: #66bb6a; }
+*/
+        header { width: 1000px; height: 100px; background: #2e7d32; }
+        nav { width: 1000px; height: 100px; background: #388e3c; }
+        aside { float: left; width: 300px; height: 600px; background: #43a047; }
+        section { float: left; width: 700px; height: 600px; background: #4caf50; }
+        footer { clear: both; width: 1000px; height: 100px; background: #66bb6a; }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+<!--
+        웹표준 수업에서는 이렇게 진행했지만
+        <div class="header"></div>
+        <div class="nav"></div>
+        <div class="side"></div>
+        <div class="content"></div>
+        <div class="footer"></div>
+-->
+        <!-- html5부터는 시멘틱(의미) 태그가 나타남 >> 익플8에서는 지원이 안됨(최신소스라) -->
+        <header></header>
+        <nav></nav>
+        <aside></aside>
+        <section></section>
+        <footer></footer>
+    </div>
+</body>
+</html>
