@@ -6,14 +6,22 @@
     <meta name="description" content="웹 표준을 준수한 사이트 예제입니다">
     <meta name="keywords" content="웹표준, 웹접근성사이트만들기">
     <meta name="generator" content="breakets">
-    <title>반응형 사이트 만들기 : 문서 셋팅</title>
+    <title>반응형 사이트 만들기 : 헤더 메뉴</title>
 
     <!-- style -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+
+    <!-- twitter meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@qhfrjdjqt" />
+    <meta name="twitter:title" content="공부중(title)" />
+    <meta name="twitter:description" content="반응형 사이트 만들기(description)." />
+    <meta property="twitter:image" content="http://alice1411.dothome.co.kr/responsive/html5/icon/favicon-152.png"/>
 
     <!-- 파비콘 -->
-    <link rel="shortcut icon" href="icon/favicon.ico">
+    <link rel="shortcut icon" href="icon/favicon-152.png">
     <link rel="apple-touch-icon-precomposed" href="icon/favicon-152.png">
     <link rel="icon" href="icon/favicon-64.png">
     <link rel="icon" href="icon/favicon-16.png" sizes="16x16"> 
@@ -21,6 +29,9 @@
     <link rel="icon" href="icon/favicon-48.png" sizes="48x48"> 
     <link rel="icon" href="icon/favicon-64.png" sizes="64x64"> 
     <link rel="icon" href="icon/favicon-128.png" sizes="128x128">
+
+    <!-- 웹 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
     
     <!-- HTLM5shiv ie6~8 
         구 익스플로어는 새로운 태그를 인식못함
@@ -34,10 +45,106 @@
     
 </head>
 <body>
-    
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <div class="header">
+                    <div class="header_menu">
+                        <a href="#">Blog</a>
+                        <a href="#">Github</a>
+                        <a href="#">Youtube</a>
+                    </div>
+                    <!-- //header_menu -->
+                    <div class="header_tit">
+                        <h1>Professional Web Publihser</h1><br>
+                        <a href="http://www.youtube.com">http://www.youtube.com</a>
+                    </div>
+                    <!-- //header_tit -->
+                    <div class="header_icon">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-html5" aria-hidden="true"></i><span>HTML5</span></a></li>
+                            <li><a href="#"><i class="fa fa-github" aria-hidden="true"></i><span>Github</span></a></li>
+                            <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i><span>Youtube</span></a></li>
+                            <li><a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i><span>twitter</span></a></li>
+                        </ul>
+                    </div>
+                    <!-- //header_icon -->
+                    <!-- 
+                        https://developers.facebook.com/tools/debug/
+                        https://cards-dev.twitter.com/validator
+                    -->
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- hearder -->
+
+
+    <nav>
+        <h2>반응형 사이트 전체 메뉴</h2>
+    </nav>
+    <article>
+        <h2>반응형 사이트 서브 타이틀</h2>
+    </article>
+    <main>
+    <section>
+        <h2>반응형 사이트 컨텐츠</h2>
+        <section>
+            <h3>반응형 사이트 왼쪽 컨텐츠</h3>
+            <article>
+                <h4>반응형 사이트 왼쪽 컨텐츠1</h4>
+            </article>
+            <article>
+                <h4>반응형 사이트 왼쪽 컨텐츠2</h4>
+            </article>
+            <article>
+                <h4>반응형 사이트 왼쪽 컨텐츠3</h4>
+            </article>
+        </section>
+        <section>
+            <h3>반응형 사이트 가운데 컨텐츠</h3>
+            <article>
+                <h4>반응형 사이트 가운데 컨텐츠1</h4>
+            </article>
+            <article>
+                <h4>반응형 사이트 가운데 컨텐츠2</h4>
+            </article>
+            <article>
+                <h4>반응형 사이트 가운데 컨텐츠3</h4>
+            </article>
+        </section>
+        <section>
+            <h3>반응형 사이트 오른쪽 컨텐츠</h3>
+            <article>
+                <h4>반응형 사이트 오른쪽 컨텐츠1</h4>
+            </article>
+            <article>
+                <h4>반응형 사이트 오른쪽 컨텐츠2</h4>
+            </article>
+            <article>
+                <h4>반응형 사이트 오른쪽 컨텐츠3</h4>
+            </article>
+        </section>
+    </section>
+    </main>
+    <footer>
+        <h2>반응형 사이트 풋터</h2>
+    </footer>
+
     <!-- JavaScript Libraries -->
     <script src="js/jquery.min_1.12.4.js"></script>
     <script src="js/modernizr-custom.js"></script>
     <!-- 현재 사용자가 쓰는 브라우저의 특징을 알려주는 스크립트 -->
+    <script>
+        //http://www.facebook.com/sharer.php?u={페이지 제목}&t={페이지링크}
+        //http://twitter.com/intent/tweet?text={페이지 제목}&url={페이지링크}
+        //https://share.naver.com/web/shareView.nhn?url={페이지링크}&title={페이지 제목}
+        //https://plus.google.com/share?url={페이지링크}&t={페이지 제목}
+
+        $(".twitter").on("click",function(e){
+            e.preventDefault();
+            window.open('https://twitter.com/intent/tweet?text=[%EA%B3%B5%EC%9C%A0]%20' +encodeURIComponent(document.URL)+'%20-%20'+encodeURIComponent(document.title), 'twittersharedialog', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=600');
+        });
+    </script>
 </body>
 </html>
