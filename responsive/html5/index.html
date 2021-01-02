@@ -2,6 +2,8 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <!-- 웹으로 작업한거를 화면비율의 모바일에서 보여주려면 viewport를 넣어줘야한다 -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
     <meta name="author" content="hayoon">
     <meta name="description" content="웹 표준을 준수한 사이트 예제입니다">
     <meta name="keywords" content="웹표준, 웹접근성사이트만들기">
@@ -12,6 +14,8 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/lightgallery.css">
 
     <!-- twitter meta tags -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -156,60 +160,302 @@
     <!-- article -->
 
     <main>
-    <section>
-        <h2>반응형 사이트 컨텐츠</h2>
-        <section>
-            <h3>반응형 사이트 왼쪽 컨텐츠</h3>
-            <article>
-                <h4>반응형 사이트 왼쪽 컨텐츠1</h4>
-            </article>
-            <article>
-                <h4>반응형 사이트 왼쪽 컨텐츠2</h4>
-            </article>
-            <article>
-                <h4>반응형 사이트 왼쪽 컨텐츠3</h4>
-            </article>
-        </section>
-        <section>
-            <h3>반응형 사이트 가운데 컨텐츠</h3>
-            <article>
-                <h4>반응형 사이트 가운데 컨텐츠1</h4>
-            </article>
-            <article>
-                <h4>반응형 사이트 가운데 컨텐츠2</h4>
-            </article>
-            <article>
-                <h4>반응형 사이트 가운데 컨텐츠3</h4>
-            </article>
-        </section>
-        <section>
-            <h3>반응형 사이트 오른쪽 컨텐츠</h3>
-            <article>
-                <h4>반응형 사이트 오른쪽 컨텐츠1</h4>
-            </article>
-            <article>
-                <h4>반응형 사이트 오른쪽 컨텐츠2</h4>
-            </article>
-            <article>
-                <h4>반응형 사이트 오른쪽 컨텐츠3</h4>
-            </article>
-        </section>
+    <section id="contents">
+        <div class="container">
+            <h2 class="ir_su">반응형 사이트 컨텐츠</h2>
+            <section id="cont_left">
+                <h3 class="ir_su">반응형 사이트 왼쪽 컨텐츠</h3>
+                <article class="column col1">
+                    <h4 class="col_tit">Menu<h4>
+                    <p class="col_desc">box-shadow를 이용한 마우스 오버 효과입니다.</p>
+                    <!-- Menu -->
+                    <div class="menu">
+                        <ul>
+                            <li><a href="#">Cafe <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
+                            <li><a href="#">Tutorial <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
+                            <li><a href="#">WebSite <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
+                            <li><a href="#">Reference <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
+                            <li><a href="#">CSS3 <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
+                            <li><a href="#">HTML5 <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                    <!-- / Menu / -->
+                </article>
+                <!-- /col1/ -->
+                <article class="column col2">
+                    <h4 class="col_tit">Notice</h4>
+                    <p class="col_desc">게시판 영역의 한줄 효과와 두줄 효과 게시판입니다.</p>
+                    <!-- 게시판 -->
+                    <div class="notice1">
+                        <h5>notice1</h5>
+                        <ul>
+                            <li><a href="#">이 줄은 한 줄 효과입니다. 이 줄은 한 줄 효과입니다.</a></li>
+                            <li><a href="#">이 줄은 한 줄 효과입니다. 이 줄은 한 줄 효과입니다.</a></li>
+                            <li><a href="#">이 줄은 한 줄 효과입니다. 이 줄은 한 줄 효과입니다.</a></li>
+                            <li><a href="#">이 줄은 한 줄 효과입니다. 이 줄은 한 줄 효과입니다.</a></li>
+                        </ul>
+                        <a href="#" class="more" title="더 보기">More<i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                    </div>
+                    <!-- / 게시판 / -->
+                    <!-- 게시판2 -->
+                    <div class="notice2 mt15">
+                        <h5>notice2</h5>
+                        <ul>
+                            <li><a href="#">이 줄은 한 줄 효과입니다. 이 줄은 한 줄 효과입니다. 이 줄은 한 줄 효과입니다. 이 줄은 한 줄 효과입니다.</a></li>
+                            <li><a href="#">이 줄은 한 줄 효과입니다. 이 줄은 한 줄 효과입니다. 이 줄은 한 줄 효과입니다. 이 줄은 한 줄 효과입니다.</a></li>
+                            <li><a href="#">이 줄은 한 줄 효과입니다. 이 줄은 한 줄 효과입니다. 이 줄은 한 줄 효과입니다. 이 줄은 한 줄 효과입니다.</a></li>
+                            <li><a href="#">이 줄은 한 줄 효과입니다. 이 줄은 한 줄 효과입니다. 이 줄은 한 줄 효과입니다. 이 줄은 한 줄 효과입니다.</a></li>
+                        </ul>
+                        <a href="#" class="more" title="더 보기">More<i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                    </div>
+                    <!-- / 게시판2 / -->
+                </article>
+                <!-- /col2/ -->
+                <article class="column col3">
+                    <h4 class="col_tit">Blog<h4>
+                    <p class="col_desc">해상도에 따라 이미지를 다르게 표현하는 방법입니다.</p>
+                    <!-- blog1 -->
+                    <!-- 고해상도 이미지 작업방법 1번 -->
+                    <div class="blog1">
+                        <h5 class="ir_su">image1</h5>
+                        <figure>
+                            <!-- 고해상도 이미지(레티나) 작업방법1-1번 -->
+                            <!-- <img src="img/blog1_@1.jpg" class="img-normal" alt="narmal image">
+                            <img src="img/blog1_@2.jpg" class="img-retina" alt="retina image" style="width: 100%;"> -->
+                            <img src="img/blog3_@1.jpg" srcset="img/blog3_@1.jpg 1x, img/blog3_@2.jpg 2x, img/blog3_@3.jpg 3x" alt="이미지" style="width: 100%;">
+                            <figcaption>반응형 웹사이트 이미지 글입니다. 반응형 웹사이트 이미지 글입니다. 반응형 웹사이트 이미지 글입니다. 반응형 웹사이트 이미지 글입니다. 반응형 웹사이트 이미지 글입니다.</figcaption>
+                        </figure>
+                    </div>
+                    <!-- / blog1 / -->
+
+                    <!-- blog2 -->
+                    <div class="blog2 mt15">
+                        <!-- <h5 class="ir_su">image2</h5>
+                        <figure>
+                            고해상도 이미지(레티나) 작업방법1-2번
+                            <img src="img/blog2_@1.jpg" srcset="img/blog2_@1.jpg 1x, img/blog2_@2.jpg 2x" alt="normal image" style="width: 100%;">
+                            <figcaption>반응형 웹사이트 이미지 글입니다. 반응형 웹사이트 이미지 글입니다. 반응형 웹사이트 이미지 글입니다. 반응형 웹사이트 이미지 글입니다. 반응형 웹사이트 이미지 글입니다.</figcaption>
+                        </figure> -->
+
+                        <!-- 고해상도 이미지 작업방법 2번 -->
+                        <!-- background로 많이 사용한다 >> 이거로 많이씀 -->
+                        <div class="img-retina">
+                            <h5>image2</h5>
+                        </div>
+                        <p>반응형 웹사이트 이미지 글입니다. 반응형 웹사이트 이미지 글입니다. 반응형 웹사이트 이미지 글입니다. 반응형 웹사이트 이미지 글입니다. 반응형 웹사이트 이미지 글입니다.</p>
+                    </div>
+                    <!-- / blog2 / -->
+                </article>
+                <!-- /col3/ -->
+            </section>
+            <section id="cont_center">
+                <h3 class="ir_su">반응형 사이트 가운데 컨텐츠</h3>
+                <article class="column col4">
+                    <h4 class="col_tit">Slick Slider</h4>
+                    <p class="col_desc">slick.js를 이용한 이미지 슬라이드 효과입니다.</p>
+                    <!-- 이미지 슬라이드 -->
+                    <div class="slider">
+                        <div>
+                            <figure>
+                            <img src="img/slider001.jpg" alt="이미지1">
+                            <figcaption><em>Responsive site1</em><span>슬라이드 플러그인을 이용한 반응형 이미지 슬라이드입니다.</span></figcaption>
+                            </figure>
+                        </div>
+                        <div>
+                            <figure>
+                            <img src="img/slider001.jpg" alt="이미지2">
+                            <figcaption><em>Responsive site2</em><span>슬라이드 플러그인을 이용한 반응형 이미지 슬라이드입니다.</span></figcaption>
+                            </figure>
+                        </div>
+                        <div>
+                            <figure>
+                            <img src="img/slider001.jpg" alt="이미지3">
+                            <figcaption><em>Responsive site3</em><span>슬라이드 플러그인을 이용한 반응형 이미지 슬라이드입니다.</span></figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <!-- / 이미지 슬라이드 / -->
+                </article>
+                <!-- /col4/ -->
+                <article class="column col5">
+                    <h4 class="col_tit">Blend Effect</h4>
+                    <p class="col_desc">Background-blend-mode와 mix-blend-mode</p>
+                    <!-- light Box -->
+                    <div class="lightbox square clearfix">
+                        <a href="img/light01_s.jpg"><img src="img/light01.jpg" alt="이미지1"><em>blur</em></a>
+                        <a href="img/light02_s.jpg"><img src="img/light02.jpg" alt="이미지2"><em>brightness</em></a>
+                        <a href="img/light03_s.jpg"><img src="img/light03.jpg" alt="이미지3"><em>contrast</em></a>
+                        <a href="img/light04_s.jpg"><img src="img/light04.jpg" alt="이미지4"><em>grayscale</em></a>
+                        <a href="img/light05_s.jpg"><img src="img/light05.jpg" alt="이미지5"><em>hur-rotate</em></a>
+                        <a href="img/light06_s.jpg"><img src="img/light06.jpg" alt="이미지6"><em>invert</em></a>
+                        <a href="img/light07_s.jpg"><img src="img/light07.jpg" alt="이미지7"><em>opacity</em></a>
+                        <a href="img/light08_s.jpg"><img src="img/light08.jpg" alt="이미지8"><em>saturate</em></a>
+                        <a href="img/light09_s.jpg"><img src="img/light09.jpg" alt="이미지9"><em>sepia</em></a>
+                        <a href="img/light10_s.jpg"><img src="img/light10.jpg" alt="이미지10"><em>Mix</em></a>
+                    </div>
+                    <!-- / light Box / -->
+                </article>
+                <!-- /col5/ -->
+                <article class="column col6">
+                    <h4 class="col_tit">Video</h4>
+                    <p class="col_desc">
+                        보스로 2행시 해보겠습니다<br>
+                        보 : 보스<br>
+                        스 : 돌아와
+                    </p>
+                    <!-- Video -->
+                    <!-- <video autoplay="autoplay" controls loop="loop">
+                        <source src="img/NCT_U-BOSS(Dance Practice).mp4" type="video/mp4">
+                    </video> -->
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/-7tSTUR7FG0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <!-- / Video / -->
+                </article>
+                <!-- /col6/ -->
+            </section>
+            <section id="cont_right">
+                <h3 class="ir_su">반응형 사이트 오른쪽 컨텐츠</h3>
+                <article class="column col7">
+                    <h4 class="col_tit">Effect1</h4>
+                    <p class="col_desc">CSS의 transform을 이용한 마우스 오버효과 입니다.</p>
+                    <!-- side1 -->
+                    <div class="side1">
+                        <figure class="front">
+                            <img src="img/side1.jpg" alt="이미지1">
+                        </figure>
+                        <div class="back">
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <!-- / side1 / -->
+                </article>
+                <!-- /col7/ -->
+                <article class="column col8">
+                    <h4 class="col_tit">Effect2</h4>
+                    <p class="col_desc">CSS의 transform을 이용한 마우스 오버효과 입니다.</p>
+                    <!-- side2 -->
+                    <div class="side2">
+                        <figure class="front">
+                            <img src="img/side4.jpg" alt="이미지3">
+                            <figcaption>Hover Effect</figcaption>
+                        </figure>
+                        <figure class="back">
+                            <img src="img/side2.jpg" alt="이미지3">
+                            <figcaption>Hover Effect</figcaption>
+                        </figure>
+                    </div>
+                    <!-- / side2 / -->
+                </article>
+                <!-- /col8/ -->
+                <article class="column col9">
+                    <h4 class="col_tit">Effect3</h4>
+                    <p class="col_desc">CSS의 transform을 이용한 마우스 오버효과 입니다.</p>
+                    <!-- side3 -->
+                    <div class="side3">
+                        <figure class="front">
+                            <img src="img/side3.jpg" alt="이미지3">
+                            <figcaption>
+                                <h3>Hover<em>Effect</em></h3>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <!-- / side3 / -->
+                </article>
+                <!-- /col9/ -->
+            </section>
+        </div>
     </section>
+    <!-- contents -->
     </main>
-    <footer>
-        <h2>반응형 사이트 풋터</h2>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer">
+                    <ul>
+                        <li><a href="#">사이트 도움말</a></li>
+                        <li><a href="#">사이트 이용약관</a></li>
+                        <li><a href="#">사이트 운영원칙</a></li>
+                        <li><a href="#"><strong>개인정보취급방침</strong></a></li>
+                        <li><a href="#">책임의 한계와 법적고지</a></li>
+                        <li><a href="#">게시중단요청서비스</a></li>
+                        <li><a href="#">고객센터</a></li>
+                    </ul>
+                    <address>
+                        Copyright ©
+                        <a href="http://webstoryboy.co.kr"><strong>webstoryboy</strong></a>
+                        All Rights Reserved.
+                    </address>
+                </div>
+            </div>
+        </div>
     </footer>
+    <!-- footer -->
+
 
     <!-- JavaScript Libraries -->
-    <script src="js/jquery.min_1.12.4.js"></script>
+    <script src="js/jquery.min_1.12.4.js"></script> 
+    <!-- 
+        현재 사용자가 쓰는 브라우저의 특징을 알려주는 스크립트
+        모더나이저(Modernizr)는 작은 크기의 오픈소스 자바스크립트 라이브러리로서, 
+        사용자가 현재 이용중인 웹 브라우저에서 HTML5와 CSS3의 명세에 정의된 기능 중 어떤 기능을 지원하는지를 알아볼 때 사용합니다. 
+     -->
     <script src="js/modernizr-custom.js"></script>
-    <!-- 현재 사용자가 쓰는 브라우저의 특징을 알려주는 스크립트 -->
+    <script src="js/slick.min.js"></script>
+    <script src="js/lightgallery-all.min.js"></script>
+    <script src="js/lightgallery.min.js"></script>
     <script>
+        // 메뉴 열고닫기
+        $(".btn").click(function(e){
+            e.preventDefault();
+            $(".nav").slideToggle();
+            $(".btn").toggleClass("open");
+            if($(".btn").hasClass("open")){
+                $(".btn").children("i").attr("class","fa fa-angle-up");
+            } else {
+                $(".btn").children("i").attr("class","fa fa-angle-down");
+            }
+        });
+
+        // 스크립트로 블록을 만들어줘서 브라우저를 줄여도 나타나게 된다 >> 없애주는 작업 
+        $(window).resize(function(){
+            var wWidth =$(window).width();
+            if(wWidth > 600){
+                $(".nav").removeAttr("style");
+                $(".btn").children("i").attr("class","fa fa-angle-down");
+            }
+        });
+
+        //이미지 갤러리
+        $(".lightbox").lightGallery({
+            autoplay: true,
+            pause: 3000,
+            progressBar: true
+        });
+
+        //이미지 슬라이더
+        $(".slider").slick({
+            dots: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            arrows: true,
+            responsive: [
+                // 화면 크기에 따라서 틀려지게
+                {
+                    breakpoint: 600, // 중단점 >> 이거는 화면크기
+                    settings: {
+                        autoplay: false
+                    }
+                }
+            ]
+        });
+        
         //http://www.facebook.com/sharer.php?u={페이지 제목}&t={페이지링크}
         //http://twitter.com/intent/tweet?text={페이지 제목}&url={페이지링크}
         //https://share.naver.com/web/shareView.nhn?url={페이지링크}&title={페이지 제목}
         //https://plus.google.com/share?url={페이지링크}&t={페이지 제목}
-
+        // sns공유하기
         $(".twitter").on("click",function(e){
             e.preventDefault();
             window.open('https://twitter.com/intent/tweet?text=[%EA%B3%B5%EC%9C%A0]%20' +encodeURIComponent(document.URL)+'%20-%20'+encodeURIComponent(document.title), 'twittersharedialog', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=600');
