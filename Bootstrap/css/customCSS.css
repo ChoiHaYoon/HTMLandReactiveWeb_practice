@@ -1,0 +1,78 @@
+/* All */
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+ /* 외부에서 css가져오기 >> 나눔고딕 */
+* {
+    font-family : 'Nanum Gothic';
+ }
+a {
+    color: #000000;
+    text-decoration: none;
+}
+a:hover{
+    color: #bbbbbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* navbar */
+.navbar-default{ /* 배경 색상 */
+    background-color: #000000;
+    border-color: #000000;
+}
+.navbar-default .navbar-brand{ /* 내비게이션 제목 색상 */
+    color: #ffffff;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus{ /* 내비게이션 제목에 마우스 올렸을 경우 */
+    color: #bbbbbb;
+    background-color: transparent;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus{
+    /* 현재 선택된 내비게이션 색상 변경 */
+    color: white;
+    background: #000000;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    /* 내비게이션 글자에 마우스를 올렸을 때 */
+    color: #bbbbbb;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus{
+    /* 드랍다운이 열렸을 때 마우스 이벤트 */
+    color: #000000;
+    background-color: #ffffff;
+    text-decoration: none;
+}
+
+.navbar-default .navbar-nav > li > a { 
+    /* 내비게이션 기본색상 */
+    color: white;
+}
+
+/* 미디어 쿼리도 고쳐주기 */
+@media(max-width: 767px){
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #ffffff;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #bbbbbb;
+    }
+    .navbar-default .navbar-form .form-group {
+        display: inline-block;
+        width: 85%;
+    }
+}
+
+.jumbotron{
+    text-shadow: black 0.2em 0.2em 0.2em;
+    color: white;
+    background-image: url("../images/fromhome.jpeg");
+    background-size: cover;
+}
